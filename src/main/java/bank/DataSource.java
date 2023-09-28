@@ -2,6 +2,7 @@ package bank;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.DriverManager;
 
 public class DataSource {
   
@@ -11,7 +12,7 @@ public class DataSource {
     
     try{
       connection = DriverManager.getConnection(db_file);
-      System.out.println("we're connected")
+      System.out.println("we're connected");
     } catch(SQLException e){
       e.printStackTrace();
     }
